@@ -57,7 +57,7 @@ const Hero = ({ title, intro, cta, ctaSecondary }) => {
                     border: '1px solid #dadce0',
                     color: '#202124',
                     ':hover': {
-                      backgroundColor: '#dadce0',
+                      backgroundColor: '#f7f8ff',
                       outline: 'none',
                       textDecoration: 'none',
                       boxShadow: '0 2px 4px -1px rgba(0,0,0,0.2), 0 4px 5px 0 rgba(0,0,0,0.14), 0 1px 10px 0 rgba(0,0,0,0.12)'

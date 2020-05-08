@@ -1,5 +1,8 @@
+/** @jsx jsx */
 import React, { useEffect } from 'react'
+import { jsx, Container } from 'theme-ui'
 import Head from 'next/head'
+import Link from 'next/link'
 import { useUser } from '../context/userContext'
 import firebase from '../firebase/clientApp'
 import Hero from '../components/Hero'
@@ -29,6 +32,39 @@ export default () => {
         cta={{ link: '/', label: 'Contact Us' }}
         ctaSecondary={{ link: '/', label: 'Latest news' }}
       />
+      <section>
+        <Container
+          sx={{
+            textAlign: 'center'
+          }}>
+          <p
+            sx={{
+              textAlign: 'center',
+              maxWidth: '100%',
+              mx: 'auto',
+              mt: 5,
+              fontSize: 4
+            }}>
+            As the web advances, users' expectations grow. With web.dev's guidance, you can give your users the best experience, wherever
+            they are.
+          </p>
+          <Link href="/about">
+            <a
+              sx={{
+                variant: 'styles.ctabutton',
+                color: 'accent',
+                backgroundColor: 'transparent',
+                mx: 'auto',
+                ':hover': {
+                  backgroundColor: '#f7f8ff',
+                  boxShadow: '0 2px 4px -1px rgba(0,0,0,0.2), 0 4px 5px 0 rgba(0,0,0,0.14), 0 1px 10px 0 rgba(0,0,0,0.12)'
+                }
+              }}>
+              About Crazy Code
+            </a>
+          </Link>
+        </Container>
+      </section>
     </>
   )
 }
