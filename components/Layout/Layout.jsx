@@ -1,5 +1,5 @@
 /** @jsx jsx */
-import { jsx, Container } from 'theme-ui'
+import { jsx } from 'theme-ui'
 import PropTypes from 'prop-types'
 import Header from '../Header'
 import Footer from '../Footer'
@@ -18,7 +18,8 @@ const Layout = ({ children }) => {
         sx={{
           variant: 'styles.main'
         }}>
-        <Container>{children}</Container>
+        {/* <Container>{children}</Container> */}
+        {children}
       </main>
       <Footer />
     </div>

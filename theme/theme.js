@@ -6,7 +6,7 @@ export default {
     heading: 'inherit',
     monospace: 'Menlo, monospace'
   },
-  fontSizes: [12, 14, 16, 20, 24, 32, 48, 64, 96],
+  fontSizes: [12, 14, 16, 20, 24, 36, 48, 64, 96],
   fontWeights: {
     body: 400,
     heading: 700,
@@ -17,12 +17,13 @@ export default {
     heading: 1.125
   },
   sizes: {
-    container: ['40em', '52em', '64em']
+    container: ['40em', '52em', '960px']
   },
   layout: {
     container: {
-      maxWidth: '100%',
-      mx: 4
+      maxWidth: '960px',
+      mx: 'auto',
+      p: 4
     }
   },
   colors: {
@@ -31,6 +32,8 @@ export default {
     headerbg: '#fff',
     title: '#f4f7fc',
     primary: '#fafafa',
+    accent: '#3F51B5',
+    accentColor: '#fff',
     modes: {
       dark: {
         text: '#000',
@@ -84,6 +87,32 @@ export default {
     button: {
       color: 'text'
     },
+    ctabutton: {
+      color: 'text',
+      borderRadius: '3px',
+      height: '56px',
+      display: 'inline-flex',
+      letterSpacing: '1px',
+      outline: 0,
+      backgroundColor: 'accent',
+      color: 'accentColor',
+      p: 3,
+      textTransform: 'uppercase',
+      fontSize: 1,
+      alignItems: 'center',
+      justifyContent: 'center',
+      textRendering: 'optimizeSpeed',
+      transition: 'background-color .2s,box-shadow .2s',
+      verticalAlign: 'middle',
+      whiteSpace: 'nowrap',
+      border: 0,
+      cursor: 'pointer',
+      ':hover': {
+        outline: 'none',
+        textDecoration: 'none',
+        boxShadow: '0 2px 4px -1px rgba(0,0,0,0.2), 0 4px 5px 0 rgba(0,0,0,0.14), 0 1px 10px 0 rgba(0,0,0,0.12)'
+      }
+    },
     input: {
       lineHeight: '2em',
       borderRadius: '3px',
@@ -95,7 +124,10 @@ export default {
     },
     h1: {
       variant: 'text.heading',
-      fontSize: 5
+      fontSize: 5,
+      mt: 5,
+      mb: 3,
+      fontWeight: '500'
     },
     h2: {
       variant: 'text.heading',
