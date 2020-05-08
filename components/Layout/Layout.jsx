@@ -1,13 +1,26 @@
-import React from 'react'
+/** @jsx jsx */
+import { jsx, Container } from 'theme-ui'
 import PropTypes from 'prop-types'
 import Header from '../Header'
+import Footer from '../Footer'
 
 const Layout = ({ children }) => {
   return (
-    <div>
+    <div
+      sx={{
+        display: 'flex',
+        flexDirection: 'column'
+        // set this to `minHeight: '100vh'` for full viewport height
+        // minHeight: '100vh'
+      }}>
       <Header />
-      {children}
-      <footer>Footer</footer>
+      <main
+        sx={{
+          variant: 'styles.main'
+        }}>
+        <Container>{children}</Container>
+      </main>
+      <Footer />
     </div>
   )
 }
