@@ -12,14 +12,14 @@ const Header = (props) => {
       <Link href="/">
         <a
           sx={{
-            height: '30px'
+            height: '50px'
           }}>
           <img
             sx={{
-              height: '30px'
+              height: '50px'
             }}
             alt="UI Logo"
-            src="https://www.onlinewebdesign.ro/_next/static/images/online-webdesign-logo-9ddcfc4f40adb03b73cf4a69f400d8a3.svg"
+            src="/assets/furculitasicutit.svg"
           />
           <span
             sx={{
